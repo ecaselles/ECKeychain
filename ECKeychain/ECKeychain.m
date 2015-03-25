@@ -55,8 +55,8 @@
     
     CFDictionaryRef queryOutput = nil;
     OSStatus result = SecItemCopyMatching((__bridge CFDictionaryRef)queryDictionary, (CFTypeRef *)&queryOutput);
-    if (result == errSecSuccess) {
-        NSLog(@"Failed to get attributes Keychain item attributes for account \"%@\" in service \"%@\" (Error %li)", account, service, (long int)result);
+    if (result != errSecSuccess) {
+        NSLog(@"Failed to get Keychain item attributes for account \"%@\" in service \"%@\" (Error %li)", account, service, (long int)result);
     }
     
     return (__bridge NSDictionary *)queryOutput;
