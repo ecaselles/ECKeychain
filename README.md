@@ -40,7 +40,8 @@ NSData *keychainData = [ECKeychain dataForAccount:@"account"
                                         inService:@"service"
                                   withAccessGroup:nil];
 if (keychainData) {
-  NSString *password = [[NSString alloc] initWithData:keychainData encoding:NSUTF8StringEncoding];
+  NSString *password = [[NSString alloc] initWithData:keychainData
+                                             encoding:NSUTF8StringEncoding];
   if (password) {
     NSLog(@"Password retrieved from Keychain was: %@.", password);
   }
