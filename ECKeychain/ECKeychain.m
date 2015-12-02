@@ -7,6 +7,10 @@
 
 #import "ECKeychain.h"
 
+#if !DEBUG
+#define NSLog(...)
+#endif
+
 @implementation ECKeychain
 
 #pragma mark - Private methods
