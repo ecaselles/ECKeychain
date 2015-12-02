@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ECKeychain"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "Simple interface for managing items in Keychain (iOS and Mac)."
   s.homepage         = "https://github.com/ecaselles/eckeychain"
   s.license          = 'MIT'
